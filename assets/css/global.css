@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'icones';
+  src: url(../font/icones.ttf);
+}
+
+:root {
+  --primary-color: hsla(206, 96%, 44%, 1);
+
+  /* Bg Colors */
+  --neutro-100: hsla(206, 14%, 10%, 1);
+  --neutro-90: hsla(212, 18%, 14%, 1);
+  --neutro-80: hsla(206, 14%, 20%, 1);
+
+  /* Text Colors */
+  --primary-text: hsla(0, 0%, 100%, 1);
+  --secondary-text: hsla(206, 3%, 60%, 1);
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--neutro-90);
+  font-family: 'Open Sans', 'icones', sans-serif;
+  color: #FFF;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width:1140px) {
+  body {
+    display: grid;
+    grid-template-columns: 20.4rem 1fr;
+  }
+}

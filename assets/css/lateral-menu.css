@@ -1,0 +1,79 @@
+/* ===== LATERAL MENU ======================================================= */
+.lateral-menu {
+  background-color: var(--neutro-100);
+  position: absolute;
+  width: 75vw;
+  height: 100vh;
+  left: -100vw;
+  text-align: center;
+  transition: 0.3s all;
+  z-index: 1;
+}
+
+.lateral-menu--opened {
+  left: 0;
+  transition: 0.3s all;
+}
+
+.lateral-menu__logo {
+  width: 11.8rem;
+  margin: 2.4rem auto 3.4rem;
+}
+
+.lateral-menu__items::before {
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 2.4rem;
+
+  position: absolute;
+  left: 1.9rem;
+}
+
+.lateral-menu__items:nth-child(1)::before {
+  content: "\e902";
+}
+
+.lateral-menu__items:nth-child(2)::before {
+  content: "\e90e";
+}
+
+.lateral-menu__items:nth-child(3)::before {
+  content: "\e909";
+}
+
+.lateral-menu__items:nth-child(4)::before {
+  content: "\e903";
+}
+
+.lateral-menu__items:nth-child(5)::before {
+  content: "\e900";
+}
+
+.lateral-menu__items:nth-child(6)::before {
+  content: "\e90a";
+}
+
+.lateral-menu__items {
+  height: 5.2rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--secondary-text);
+  padding-left: 6.4rem;
+}
+
+.lateral-menu__items--ativo {
+  padding: 0 5.6rem;
+  border-left: .8rem solid var(--primary-text);
+  color: var(--primary-text);
+}
+
+@media screen and (min-width:1140px) {
+  .lateral-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20.4rem;
+  }
+}

@@ -1,0 +1,200 @@
+/* ===== MAIN =============================================================== */
+.main {
+  padding: 2.4rem 1.6rem;
+}
+
+.main__title {
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 1.6rem;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__img--desktop {
+  display: none;
+}
+
+.card__content {
+  padding: 1.6rem;
+  background-color: var(--neutro-80);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .8rem;
+}
+
+.card__subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+  grid-column: span 2;
+}
+
+.card__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  grid-column: span 2;
+}
+
+.card__author {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--secondary-text);
+  grid-column: span 2;
+}
+
+.card__info {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--secondary-text);
+  padding-left: 2rem;
+}
+
+.card__info--time:before {
+  content: "\e90c";
+  position: absolute;
+  left: 0;
+}
+
+.card__info--views:before {
+  content: "\e90f";
+  position: absolute;
+  left: 0;
+}
+
+.card__info--sell:before {
+  content: "\e905";
+  position: absolute;
+  left: 0;
+}
+
+.card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: .8rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  width: 4rem;
+  height: 4rem;
+  justify-self: flex-end;
+}
+
+.card__button--play::before {
+  content: "\e90b";
+  position: relative;
+  top: .2rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.card__button--sell::before {
+  content: "\e901";
+  position: relative;
+  top: .2rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.card__button--destaque {
+  width: 100%;
+  gap: .8rem;
+  grid-column: span 2;
+}
+
+.main__highlights {
+  margin: 3.2rem 0;
+  display: grid;
+  gap: 1.6rem;
+}
+
+@media screen and (min-width:1140px) {
+  .main {
+    grid-column: 2;
+    padding: 3rem 5.8rem 2.4rem;
+
+    display: grid;
+    grid-template: "titulo titulo titulo"
+      "featured-video featured-video recent-videos"
+      "highlights-videos highlights-videos highlights-videos"
+      "recent-arts featured-product featured-product"
+      "highlights-products highlights-products highlights-products"
+      / 1fr 1fr 1fr;
+    gap: 3.2rem;
+  }
+
+  .featured-card--video {
+    grid-area: featured-video;
+  }
+
+  .recents--videos {
+    grid-area: recent-videos;
+  }
+
+  .main__highlights--videos {
+    grid-area: highlights-videos;
+  }
+
+  .recents--arts {
+    grid-area: recent-arts;
+  }
+
+  .featured-card--product {
+    grid-area: featured-product;
+  }
+
+  .main__highlights--products {
+    grid-area: highlights-products;
+  }
+
+  .card__img--mobile {
+    display: none;
+  }
+
+  .card__img--desktop {
+    display: block;
+    width: 100%;
+    height: 33.6rem;
+  }
+
+  .featured-card--video .card__img--desktop {
+    background: url("../img/banner_1.png") no-repeat .1rem center / cover;
+  }
+
+  .featured-card--product .card__img--desktop {
+    background: url("../img/banner_2.png") no-repeat center .1rem / cover;
+  }
+
+  .section__title {
+    grid-column: span 4;
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+
+  .card__title {
+    min-height: 4.8rem;
+  }
+
+  .main__highlights {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+  }
+}

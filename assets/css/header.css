@@ -1,0 +1,73 @@
+/* ===== HEADER ============================================================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--neutro-100);
+  padding: .8rem 1.6rem;
+  box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.16);
+}
+
+.header__menu::before {
+  content: "\e904";
+  font-size: 2.4rem;
+}
+
+.header__logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.header__perfil {
+  display: none;
+}
+
+.header__notification::before {
+  content: "\e906";
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width:1140px) {
+  .header {
+    background-color: var(--neutro-70);
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2.6rem;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__perfil {
+    display: flex;
+    gap: .8rem;
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+    color: var(--secondary-text);
+    padding-right: 6.4rem;
+    border-right: 1px solid #FFF;
+  }
+
+  .header__perfil::before {
+    content: "";
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: url("../img/profile_2.png") no-repeat center / contain;
+  }
+
+  .header__perfil::after {
+    content: "\e90d";
+  }
+
+  .header__notification::before {
+    padding: 0 3.2rem;
+  }
+}
